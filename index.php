@@ -18,5 +18,6 @@
     $router->setPath ( site_path . 'controllers' );
     $router->delegate();
     $template->setFile('templates/index.phtml');
+
     
     echo $template->toHtml();
