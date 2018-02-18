@@ -85,4 +85,9 @@ Class Template
         $this->vars['headfiles'] = $css.' '.$js;
         return $this;
     }
+    
+    public function getUrl($url)
+    {
+        return base_url . $url;
+    }
 }

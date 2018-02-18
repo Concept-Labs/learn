@@ -5,6 +5,10 @@
         {{$headfiles}}
     </head>
     <body>
+        {{$header}}
+        {{$menu}}
+        <!-- контент сюда попадает из файла , которий засетан в текущем контролере - например $template->setFile('templates/main.phtml') -->
         {{$content}}
+        {{$footer}}
     </body>
 </html>
