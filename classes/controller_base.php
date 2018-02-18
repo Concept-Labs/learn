@@ -7,6 +7,7 @@ Abstract Class Controller_Base
         $this->registry = $registry;
     }
 
+    
     abstract function index();
 
     protected function _initTemplate()
