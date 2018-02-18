@@ -72,9 +72,9 @@ Class Template
         $this->__js[] = $file;
     }
     
-    public function _addHeadFiles($content)
+    public function _addHeadFiles()
     {
-        $css = '';echo $content;
+        $css = '';
         foreach($this->__css as $file){
             $css .= '<link rel="stylesheet" type="text/css" href="'.base_url . $file.'" media="all"/>';
         }
