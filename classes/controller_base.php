@@ -21,8 +21,24 @@ Abstract Class Controller_Base
 
     protected function _renderLayout($template)
     {
-        $html = $template->toHtml();
         $parentTemplate = $this->_baseTemplate;
+        
+        $headerTemplate = clone $parentTemplate;
+        $headerTemplate->setFile('templates/header.phtml');
+        $_htmlheader = $headerTemplate->toHtml();
+        $parentTemplate->set('header', $_htmlheader);
+        
+        $menuTemplate = clone $parentTemplate;
+        $menuTemplate->setFile('templates/menu.phtml');
+        $_html = $menuTemplate->toHtml();
+        $parentTemplate->set('menu', $_html);
+        
+        $html = $template->toHtml();
         $parentTemplate->set('content', $html);
+        
+        $footerTemplate = clone $parentTemplate;
+        $footerTemplate->setFile('templates/footer.phtml');
+        $_htmlfooter = $footerTemplate->toHtml();
+        $parentTemplate->set('footer', $_htmlfooter);
     }
 }
