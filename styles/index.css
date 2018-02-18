@@ -2,7 +2,7 @@ body {font-family: sans-serif; }
 
 em {
     font-size:3; color:red;
-    font-face:Monaco;
+    font-face: Monaco;
     padding: 5px;
 }
 .text {text-align: center;}
@@ -43,4 +43,6 @@ body {
 
 .menu {
     padding-left: 100px;
-}
+	}
+
+

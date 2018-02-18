@@ -5,11 +5,13 @@ Class Controller_Index Extends Controller_Base
     {
         //єто файл templates/index.phtml
         return parent::_initTemplate($title);
-    }
+      
+	}
 
     public function index() 
     {
-        $template = $this->_initTemplate('Homepage');
+     	$this->_baseTemplate->addCss('styles/main.css');
+		$template = $this->_initTemplate('Homepage');
         
         $template->set("data", "Hello", false);
         $template->set("name", "Vitalik", false);
