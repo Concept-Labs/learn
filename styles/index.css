@@ -1,48 +1,46 @@
 body {font-family: sans-serif; }
 
-em {font-size:3; color:red; font-face:Monaco;}
-
+em {
+    font-size:3; color:red;
+    font-face:Monaco;
     padding: 5px;
 }
 .text {text-align: center;}
 body { 
-		background: url(/fon.jpeg);
-	
+    background: url(/fon.jpeg);
+
 
 }
 
-
-
-
 #navbar, #navbar1 {
-display: inline;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        width: 100px;
-      }
-      #navbar li {
-        border-left: 10px solid #666;
-        border-bottom: 1px solid #666;
-			
-			float: left;
-			width: 150px;
-	 }
-      #navbar a {
-        background-color: #949494;
-        color: #fff;
-        padding: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        border-left: 5px solid #33ADFF;
-        display: block;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100px;
+}
+#navbar li {
+    border-left: 10px solid #666;
+    border-bottom: 1px solid #666;
+
+    float: left;
+    width: 150px;
+}
+#navbar a {
+    background-color: #949494;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border-left: 5px solid #33ADFF;
+    display: block;
 
 
- }
+}
 #navbar1 {display:none; position: absolute;  z-index: 100;}
 #navbar1 li {float:none;}
 #navbar li:hover > ul{display:block;}
 
 .menu {
-	padding-left: 100px;
+    padding-left: 100px;
 }

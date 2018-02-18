@@ -64,12 +64,12 @@ Class Template
     
     public function addCss($file)
     {
-        $this->__css[] = $file;
+        $this->__css[$file] = $file;
     }
     
     public function addJs($file)
     {
-        $this->__js[] = $file;
+        $this->__js[$file] = $file;
     }
     
     public function _addHeadFiles()

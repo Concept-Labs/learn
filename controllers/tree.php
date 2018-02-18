@@ -4,8 +4,6 @@ Class Controller_Tree Extends Controller_Base
     protected function _initTemplate($title)
     {
         //єто файл templates/index.phtml
-        $this->_baseTemplate->addJs('script/index.js');
-        $this->_baseTemplate->addCss('styles/index.css');
         return parent::_initTemplate($title);
     }
     
