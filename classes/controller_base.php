@@ -14,6 +14,7 @@ Abstract Class Controller_Base
 
     protected function _initTemplate($title)
     {
+		$this->_baseTemplate->addCss('styles/footer.css');
         $this->_baseTemplate->addJs('script/index.js');
         $this->_baseTemplate->addCss('styles/index.css');
         $parentTemplate = $this->_baseTemplate;
