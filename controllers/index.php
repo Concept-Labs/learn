@@ -3,15 +3,16 @@ Class Controller_Index Extends Controller_Base
 {
     protected function _initTemplate($title)
     {
-        //єто файл templates/index.phtml
+        $this->_baseTemplate->addCss('styles/main.css');
+		//єто файл templates/index.phtml
         return parent::_initTemplate($title);
       
 	}
 
     public function index() 
     {
-     	$this->_baseTemplate->addCss('styles/main.css');
-		$template = $this->_initTemplate('Homepage');
+     	
+		$template = $this->_initTemplate('MyLocalCom');
         
         $template->set("data", "Hello", false);
         $template->set("name", "Vitalik", false);
