@@ -2,6 +2,6 @@
 	$dbhost = 'localhost';
 	$dbname = 'test';
 	$dbuser = 'root';
-	$dbpass = 'root';
+	$dbpass = 'goblin21';
 	
 ?>
