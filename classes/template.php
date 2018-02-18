@@ -4,7 +4,9 @@ Class Template
     private $registry;
     private $vars = array();
     private $__file = null;
-
+    private $__css = array();
+    private $__js = array();
+    
     public function __construct($registry) 
     {
         $this->registry = $registry;
@@ -46,6 +48,8 @@ Class Template
         }
         $fullPath = site_path . $this->__file;
         $content = file_get_contents($fullPath);
+        
+        $this->_addHeadFiles();
         if(preg_match_all( '/({{\$([A-Za-z]+)}})/mi', $content, $matches)){
             $replacer = $matches[1];
             $params = $matches[2];
@@ -56,5 +60,29 @@ Class Template
             }
         }
         return $content;
+    }
+    
+    public function addCss($file)
+    {
+        $this->__css[] = $file;
+    }
+    
+    public function addJs($file)
+    {
+        $this->__js[] = $file;
+    }
+    
+    public function _addHeadFiles($content)
+    {
+        $css = '';echo $content;
+        foreach($this->__css as $file){
+            $css .= '<link rel="stylesheet" type="text/css" href="'.base_url . $file.'" media="all"/>';
+        }
+        $js = '';
+        foreach($this->__js as $file){
+            $js .= '<script type="text/javascript" src="'.base_url . $file.'"></script>';
+        }
+        $this->vars['headfiles'] = $css.' '.$js;
+        return $this;
     }
 }

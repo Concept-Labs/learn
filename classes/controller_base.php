@@ -1,25 +1,28 @@
 <?php
 Abstract Class Controller_Base 
 {
-    protected $registry;
+    protected $_registry;
+    protected $_baseTemplate = null;
     function __construct($registry) 
     {
-        $this->registry = $registry;
+        $this->_registry = $registry;
+        $this->_baseTemplate = $this->_registry->get('template');
     }
 
     
     abstract function index();
 
-    protected function _initTemplate()
+    protected function _initTemplate($title)
     {
-        $parentTemplate = $this->registry->get('template');
-        return clone $this->registry->get('template');
+        $parentTemplate = $this->_baseTemplate;
+        $parentTemplate->set('title', $title);
+        return clone $this->_registry->get('template');
     }
 
     protected function _renderLayout($template)
     {
         $html = $template->toHtml();
-        $parentTemplate = $this->registry->get('template');
+        $parentTemplate = $this->_baseTemplate;
         $parentTemplate->set('content', $html);
     }
 }

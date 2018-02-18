@@ -6,6 +6,7 @@
     // Узнаём путь до файлов сайта
     $site_path = realpath(dirname(__FILE__)) . DIRSEP;
     define ('site_path', $site_path);
+    define('base_url', 'http://' . $_SERVER['HTTP_HOST'] . DIRSEP);
     include ( site_path .'startup.php' );
     // Создаём объект шаблонов
     $template = new Template( $registry );

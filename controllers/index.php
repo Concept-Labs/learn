@@ -1,9 +1,15 @@
 <?php
 Class Controller_Index Extends Controller_Base 
 {
-    public function index() 
+    protected function _initTemplate($title)
     {
-        $template = $this->_initTemplate();
+        $this->_baseTemplate->addJs('script/index.js');
+        return parent::_initTemplate($title);
+    }
+
+        public function index() 
+    {
+        $template = $this->_initTemplate('Homepage');
         
         $template->set("data", "Hello", false);
         $template->set("name", "Vitalik", false);
