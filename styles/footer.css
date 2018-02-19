@@ -19,6 +19,7 @@ div.footer-right{
 div.footer-center{
 	float: left;
 	width: 45%;
+	
 }
 
 div.footer-left{
@@ -27,4 +28,12 @@ div.footer-left{
 	text-align: left;
 	margin-left: 55px;
 	font-size: 70%;
+}
+
+.rev {
+	font-family: Sans;
+	font-weight: lighter;
+	color: #EF8E05;
+	font-style: italic;
+	font-weight: bold;
 }
