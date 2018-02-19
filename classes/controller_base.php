@@ -33,8 +33,12 @@ Abstract Class Controller_Base
             //header child     
             $headerMenu = new Block_Menu($this->_registry);
             $headerMenu->setFile('templates/header/menu.phtml');
+                $headerMenuSmail = new Block_Menu_Smail($this->_registry);
+                $headerMenuSmail->setFile('templates/header/menu/smail.phtml');
+                $_htmlHeaderMenuSmail = $headerMenuSmail->toHtmlWithPhp();
+            $headerMenu->set('headerMenuSmail', $_htmlHeaderMenuSmail);    
             $_htmlHeaderMenu = $headerMenu->toHtmlWithPhp();
-            $headerTemplate->set('headerMenu', $_htmlHeaderMenu);
+        $headerTemplate->set('headerMenu', $_htmlHeaderMenu);
         $_htmlheader = $headerTemplate->toHtml();
         $parentTemplate->set('header', $_htmlheader);
         

@@ -71,6 +71,15 @@ Class Template
         $includeFilePath = realpath(site_path . $this->__file);
         include $includeFilePath;
         $html = ob_get_clean();
+        if(preg_match_all( '/({{\$([A-Za-z]+)}})/mi', $html, $matches)){
+            $replacer = $matches[1];
+            $params = $matches[2];
+            foreach($params as $i => $param){
+                if(isset($this->vars[$param])){
+                    $html = str_replace($replacer[$i], $this->vars[$param], $html);
+                }
+            }
+        }
         return $html;
     }
     
