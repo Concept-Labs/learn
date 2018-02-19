@@ -11,6 +11,9 @@ body {
 
 
 }
+div.content {
+	margin-bottom: 10px;
+}
 
 #navbar, #navbar1 {
     display: inline;
