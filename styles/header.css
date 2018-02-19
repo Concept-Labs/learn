@@ -2,7 +2,22 @@
 	height:100px;
 }
 
+div.header-right{
+	float: right;	
+	margin-right: 10px;
+}
+
 .logo {
-	margin: 30px 10px 100px 50px;
-	width: 250px;
+	margin: 35px 10px 10px 30px;
+	
+}
+
+div.header-center{
+	float: left;
+	width: 45%;
+}
+
+div.header-left{
+	float: left;
+	width: 300px;
 }

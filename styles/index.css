@@ -45,7 +45,10 @@ div.content {
 #navbar li:hover > ul{display:block;}
 
 .menu {
-    padding-left: 100px;
-	}
+    margin-top: 50px;	
+	margin-left:20px;
+	margin-right:auto;
+	width:450px;
+}
 
 
