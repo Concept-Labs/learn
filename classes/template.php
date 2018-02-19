@@ -62,6 +62,18 @@ Class Template
         return $content;
     }
     
+    public function toHtmlWithPhp()
+    {
+        if(!$this->__file){
+            die('Темплейт должен иметь файл');
+        }
+        ob_start();
+        $includeFilePath = realpath(site_path . $this->__file);
+        include $includeFilePath;
+        $html = ob_get_clean();
+        return $html;
+    }
+    
     public function addCss($file)
     {
         $this->__css[$file] = $file;

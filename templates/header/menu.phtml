@@ -1,0 +1,21 @@
+<?php
+/* @var $this Block_Menu */
+$current = $this->getCurrentUrl();
+?>
+<div class="menu header-center">
+    <ul id="navbar">
+        <li>
+            <a href="/index" class="<?php if($current == '/index' || $current == '/'): ?>current<?php endif; ?>">Главная</a>
+        </li>
+        <li>
+            <a href="/about" class="<?php if($current == '/about'): ?>current<?php endif; ?>">О нас</a>
+        </li>
+        <li>
+            <a href="/tree" class="<?php if($current == '/tree' || $current == '/tree/view' || $current == '/tree/add'): ?>current<?php endif; ?>">Каталог</a>
+            <ul id="navbar1">
+                <li><a href="/tree/view" class="<?php if($current == '/tree/view'): ?>current<?php endif; ?>">Каталог смотреть</a></li>
+                <li><a href="/tree/add" class="<?php if($current == '/tree/add'): ?>current<?php endif; ?>">Добавить в каталог</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
