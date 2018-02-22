@@ -38,7 +38,7 @@ Class Router
         // Действие доступно?
         if (is_callable(array($controller, $action)) == false) 
         {
-            die ('Error 404: File not Found');
+            die ('Error 404: File not Found - or not callable');
         }
         // Выполняем действие
         $controller->$action();
