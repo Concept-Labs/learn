@@ -1,5 +1,6 @@
   <div class="login">
 	
+	<div style="float:left;">
 		<form action="/user/login" method="post">
             <label for="login-field">Логин:</label>
             <input type="text" name="login" id="login-field" maxlength="6" size="10">
@@ -7,10 +8,13 @@
             <label for="password-field">Пароль:</label>
             <input type="password" name="password" id="password-field" size="10">
 		<input type="submit" name="vhod" value="Войти">
-	    
-		</form>	
-	  
-	  <form action="/user/registration" method="post">
-		<button  type="submit" name="registr">Зарегистрироваться</button>
-			</form>	
+	    </form>	
+	  </div>
+	
+	 <div >
+		 
+	  	<form action="/user/registration" method="post">
+			<button  type="submit" name="registr">Зарегистрироваться</button>
+		</form>
+	</div>
 </div>
