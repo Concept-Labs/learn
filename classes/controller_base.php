@@ -19,6 +19,7 @@ Abstract Class Controller_Base
         $this->_baseTemplate->addCss('styles/index.css');
         
         $this->_baseTemplate->addCss('styles/footer.css');
+		
         $parentTemplate = $this->_baseTemplate;
         $parentTemplate->set('title', $title);
         return clone $this->_registry->get('template');
@@ -51,9 +52,16 @@ Abstract Class Controller_Base
         $html = $template->toHtml();
         $parentTemplate->set('content', $html);
         
+		$pagerTemplate = clone $parentTemplate;
+        $pagerTemplate->setFile('templates/pager.phtml');
+        $_htmlpager = $pagerTemplate->toHtml();
+        $parentTemplate->set('pager', $_htmlpager);
+		
         $footerTemplate = clone $parentTemplate;
         $footerTemplate->setFile('templates/footer.phtml');
         $_htmlfooter = $footerTemplate->toHtml();
         $parentTemplate->set('footer', $_htmlfooter);
+		
+        
     }
 }

@@ -1,4 +1,4 @@
- #footer {
+ .footer {
  	position: absolute; /* Фиксированное положение */
     left: 0; bottom: 0; /* Левый нижний угол */
     padding: 13px 0; /* Поля вокруг текста */
