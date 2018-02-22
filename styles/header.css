@@ -5,6 +5,7 @@
 div.header-right{
 	float: right;	
 	margin-right: 10px;
+	
 }
 
 .logo {
@@ -37,10 +38,10 @@ div.header-left{
     float: left;
     width: 150px;
 }
-.menu.header-center a {
+.menu a {
     background-color: #6A1707;
     color: #FFBF00;
-    padding: 5px;
+    padding: 5px;	
     text-decoration: none;
     font-weight: bold;
     border-left: 5px solid #FFBF00;
@@ -52,15 +53,26 @@ border-radius: 10px; /* Радиус скругления */
 #navbar1 li {float:none;}
 #navbar li:hover > ul{display:block; margin-left: 10px;}
 
+div.login {
+	display: block;
+	margin-top: 5px;	
+	margin-left:50px;
+	margin-right:auto;
+	
+}
+
+
+}
+
 .menu {
-    margin-top: 50px;	
+    margin-top: 15px;	
 	margin-left:20px;
 	margin-right:auto;
 	width:450px;
 }
 
 
-.menu.header-center li a.current,.menu.header-center li a:hover {
+.menu li a.current,.menu li a:hover {
     background-color: #FFBF00;
     color: #6A1707;
 	border-left: 5px solid #6A1707;

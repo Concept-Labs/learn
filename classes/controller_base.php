@@ -31,7 +31,12 @@ Abstract Class Controller_Base
         
         $headerTemplate = clone $parentTemplate;
         $headerTemplate->setFile('templates/header.phtml');
-            //header child     
+            //header child 
+		$headerLogining = new Block_Logining($this->_registry);
+            $headerLogining->setFile('templates/header/logining.phtml'); 
+            $_htmlHeaderLogining = $headerLogining->toHtmlWithPhp();
+        	$headerTemplate->set('headerLogining', $_htmlHeaderLogining);
+		
             $headerMenu = new Block_Menu($this->_registry);
             $headerMenu->setFile('templates/header/menu.phtml');
                 $headerMenuSmail = new Block_Menu_Smail($this->_registry);
@@ -39,7 +44,7 @@ Abstract Class Controller_Base
                 $_htmlHeaderMenuSmail = $headerMenuSmail->toHtmlWithPhp();
             $headerMenu->set('headerMenuSmail', $_htmlHeaderMenuSmail);    
             $_htmlHeaderMenu = $headerMenu->toHtmlWithPhp();
-        $headerTemplate->set('headerMenu', $_htmlHeaderMenu);
+        	$headerTemplate->set('headerMenu', $_htmlHeaderMenu);
         $_htmlheader = $headerTemplate->toHtml();
         $parentTemplate->set('header', $_htmlheader);
         
