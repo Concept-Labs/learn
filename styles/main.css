@@ -4,36 +4,3 @@
     margin-right: 100px; /* Отступ справа */
     margin-left: 100px; /* Отступ слева */
    }
-ul.pager
- {
-	
-	 display: inline;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    width: 100px; 
-   }
-   
-ul.pager li 
-{
-	
-    display: inline; /* Отображать как строчный элемент */
-    margin-right: 5px; /* Отступ слева */
-	border: 2px solid #000; /* Рамка вокруг текста */
-    padding: 5px; /* Поля вокруг текста */
-	font-family: 'Times New Roman', Times, serif; /* Шрифт с засечками */
-	font-style: italic; /* Курсивное начертание */
-   	border-radius: 10px; /* Радиус скругления */
-		
-	background-color: #949494;
-    color: #fff;
-    padding: 5px;
-    text-decoration: none;
-    font-weight: bold;
-   }
-
-ul.center 
-{
-	
-	 margin-left: 300px; /* Выравниваем по центру */
-   }

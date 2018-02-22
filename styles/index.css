@@ -21,28 +21,29 @@ div.content {
     padding: 0;
     list-style-type: none;
     width: 100px;
+	border-radius: 10px; /* Радиус скругления */
 }
-#navbar li {
-    border-left: 10px solid #666;
-    border-bottom: 1px solid #666;
 
+#navbar li {
+    
+	
     float: left;
     width: 150px;
 }
 #navbar a {
-    background-color: #949494;
-    color: #fff;
+    background-color: #6A1707;
+    color: #FFBF00;
     padding: 5px;
     text-decoration: none;
     font-weight: bold;
-    border-left: 5px solid #33ADFF;
+    border-left: 5px solid #FFBF00;
     display: block;
-
+border-radius: 10px; /* Радиус скругления */
 
 }
-#navbar1 {display:none; position: absolute;  z-index: 100;}
+#navbar1 {display:none; position: absolute;  z-index: 100; }
 #navbar1 li {float:none;}
-#navbar li:hover > ul{display:block;}
+#navbar li:hover > ul{display:block; margin-left: 10px;}
 
 .menu {
     margin-top: 50px;	
