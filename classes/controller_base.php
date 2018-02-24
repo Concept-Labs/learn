@@ -17,8 +17,10 @@ Abstract Class Controller_Base
 		$this->_baseTemplate->addCss('styles/header.css');
 		$this->_baseTemplate->addJs('script/index.js');
         $this->_baseTemplate->addCss('styles/index.css');
+		$this->_baseTemplate->addCss('styles/registration.css');
         $this->_baseTemplate->addCss('styles/pager.css');
         $this->_baseTemplate->addCss('styles/footer.css');
+		
 		
         $parentTemplate = $this->_baseTemplate;
         $parentTemplate->set('title', $title);
