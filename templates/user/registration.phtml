@@ -1,9 +1,13 @@
 
 <form action="/user/registration" method="post">
-            <label for="name-field">Имя:</label><br/>
-            <input type="text" name="name" id="name-field"><br/><br/>
-	
-			<label for="surname-field">Фамилия:</label><br/>
-            <input type="text" name="surname" id="surname-field">
-	
-	</form>
+    <label for="name-field">Имя:</label><br/>
+    <input type="text" name="name" id="name-field"><br/><br/>
+
+    <label for="surname-field">Фамилия:</label><br/>
+    <input type="text" name="surname" id="surname-field">
+    <select>
+        <?php for($i = 1970; $i <= 2018; $i++ ): ?>
+            <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+        <?php endfor; ?>
+    </select>
+</form>

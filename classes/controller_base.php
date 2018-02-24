@@ -25,7 +25,7 @@ Abstract Class Controller_Base
         return clone $this->_registry->get('template');
     }
 
-    protected function _renderLayout($template)
+    protected function _renderLayout($template, $usePhp = false)
     {
         $parentTemplate = $this->_baseTemplate;
         
@@ -54,7 +54,11 @@ Abstract Class Controller_Base
         $_html = $menuTemplate->toHtml();
         $parentTemplate->set('menu', $_html);
         
-        $html = $template->toHtml();
+        if($usePhp){
+            $html = $template->toHtmlWithPhp();
+        } else {
+            $html = $template->toHtml();
+        }
         $parentTemplate->set('content', $html);
         
 		$pagerTemplate = clone $parentTemplate;
