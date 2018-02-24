@@ -71,9 +71,10 @@
 	
 	<input type="date" name="month">
 	
-	
-		
 
-	
-	
-	</form>
+    <select>
+        <?php for($i = 1970; $i <= 2018; $i++ ): ?>
+            <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+        <?php endfor; ?>
+    </select>
+</form>

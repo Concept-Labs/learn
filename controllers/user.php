@@ -34,6 +34,6 @@ Class Controller_User Extends Controller_Base
        
         $template->setFile('templates/user/registration.phtml');
         
-        $this->_renderLayout($template);
+        $this->_renderLayout($template, true);
     }
 }
