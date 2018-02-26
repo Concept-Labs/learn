@@ -1,11 +1,13 @@
  .footer {
- 	position: absolute; /* Фиксированное положение */
+ 	
+	margin-top: 20px;
     left: 0; bottom: 0; /* Левый нижний угол */
     padding: 13px 0; /* Поля вокруг текста */
     text-align: center;
 	background: #808080; /* Цвет фона */
     color: #FFF	; /* Цвет текста */
     width: 100%; /* Ширина слоя */
+	height: 50px; 
 	 
    }
 

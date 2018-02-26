@@ -8,7 +8,8 @@ em {
 .text {text-align: center;}
 body { 
     background: url(/img/fon.jpeg);
-
+    padding: -10px;
+	width:110%;
 
 }
 div.content {
