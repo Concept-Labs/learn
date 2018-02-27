@@ -61,7 +61,7 @@ Class Controller_User Extends Controller_Base
                 $db = $this->_registry->get('db');
                 /* @var $db PDO */
                 $sql = "INSERT INTO `user` (`id`, `name`, `surname`, `patronymic`, `pol`, `date`, `email`, `password`) "
-                    ." VALUES ('', '{$data['name']}', '{$data['surname']}', '{$data['patronymic']}', '{$data['pol']}', '{$birthDate}',"
+                    ." VALUES (null, '{$data['name']}', '{$data['surname']}', '{$data['patronymic']}', '{$data['pol']}', '{$birthDate}',"
                     ." '{$data['email']}', '{$data['password']}');";
                 $db->query($sql);
                 if($db->errorCode() != '00000'){
