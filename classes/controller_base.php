@@ -3,8 +3,13 @@ Abstract Class Controller_Base
 {
     protected $_registry;
     protected $_baseTemplate = null;
+    protected $_session = null;
+    
     function __construct($registry) 
     {
+        if(!$this->_session){
+            $this->_session = session_start();
+        }
         $this->_registry = $registry;
         $this->_baseTemplate = $this->_registry->get('template');
     }

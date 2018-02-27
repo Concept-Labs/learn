@@ -1,21 +1,27 @@
+<?php 
+if(isset($_SESSION['error'])): ?>
+    <span style="color:red;"><?php echo $_SESSION['error'] ?></span> 
+<?php 
+unset($_SESSION['error']);
+endif; ?>
 <div class="registration">
-<form action="/user/registration" method="post">
-            <label for="name-field">Имя:</label><br/>
-            <input type="text" name="name" id="name-field"><br/><br/>
+<form action="/user/registrationPost" method="post">
+            <label for="name">Имя:</label><br/>
+            <input type="text" name="name" id="name"><br/><br/>
 	
-			<label for="surname-field">Фамилия:</label><br/>
-            <input type="text" name="surname" id="surname-field"><br/><br/>
+			<label for="surname">Фамилия:</label><br/>
+            <input type="text" name="surname" id="surname"><br/><br/>
 	
-			<label for="patronymic-field">Отчество:</label><br/>
-            <input type="text" name="patronymic" id="patronymic-field"><br/>
+			<label for="patronymic">Отчество:</label><br/>
+            <input type="text" name="patronymic" id="patronymic"><br/>
 	
 	<p>Ваш пол:</p>
 			<label>
-                <input type="radio" name="pol" value="Мужской">
+                <input type="radio" name="pol" value="1">
                 Мужской
             </label>
 			<label>
-                <input type="radio" name="pol" value="Женский">
+                <input type="radio" name="pol" value="0">
                 Женский
             </label>
 	
@@ -41,13 +47,16 @@
 				<?php endfor; ?>
 			</select><br/><br/>
 	
-	 		<label for="email-field">Ваш email:</label><br/>
-            <input type="email" name="email" id="email-field"><br/><br/>
+	 		<label for="email">Ваш email:</label><br/>
+            <input type="email" name="email" id="email"><br/><br/>
 	
 			<label for="password">Ваш пароль:</label><br/>
-            <input type="text" name="password" id="password"><br/><br/>
+            <input type="password" name="password" id="password"><br/><br/>
+            
+            <label for="password">Подтверждение пароля:</label><br/>
+            <input type="password" name="password-confirm" id="password-confirm"><br/><br/>
 	
-			<input type="submit" name="registration" value="Зарегистрироваться">
+			<input type="submit" value="Зарегистрироваться">
 	
 	
 </form>

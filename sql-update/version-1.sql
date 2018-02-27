@@ -1,0 +1,11 @@
+
+CREATE TABLE `user` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `surname` VARCHAR(45) NOT NULL,
+  `patronymic` VARCHAR(45) NOT NULL,
+  `pol` TINYINT(1) NULL,
+  `date` DATE NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`));
