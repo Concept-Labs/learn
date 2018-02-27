@@ -60,9 +60,9 @@ Class Controller_User Extends Controller_Base
                 //тут записиваем в базу данних
                 $db = $this->_registry->get('db');
                 /* @var $db PDO */
-                $sql = "INSERT INTO `user` (`id`, `name`, `surname`, `patronymic`, `pol`, `date`, `email`, `password`) "
+                $sql = "INSERT INTO `user` (`id`, `name`, `surname`, `patronymic`, `pol`, `date`, `email`, `password`, `country`) "
                     ." VALUES (null, '{$data['name']}', '{$data['surname']}', '{$data['patronymic']}', '{$data['pol']}', '{$birthDate}',"
-                    ." '{$data['email']}', '{$data['password']}');";
+                    ." '{$data['email']}', '{$data['password']}', '{$data['country']}');";
                 $db->query($sql);
                 if($db->errorCode() != '00000'){
                     $error = $db->errorInfo();
