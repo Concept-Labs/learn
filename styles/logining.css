@@ -1,0 +1,15 @@
+.logan{
+	 background: -moz-linear-gradient(#00BBD6, #EBFFFF);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#6A1707), to(#FFBF00));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+    padding: 3px 7px;
+    color: #FFBF00;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #666;
+	font-weight: bold;
+}
+.paddingin{
+margin-left: 3px;
+}
