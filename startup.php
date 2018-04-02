@@ -6,5 +6,6 @@
 	//устанавливаем соединение с базой данных
 	require_once ( site_path .'config.php' );
 	$db = new PDO('mysql:host='.$dbhost.';dbname='.$dbname, $dbuser, $dbpass );
+    $db->query('SET NAMES utf8;');
 	$registry->set ('db', $db);
 ?>
