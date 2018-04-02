@@ -23,8 +23,8 @@ Abstract Class Controller_Base
 		$this->_baseTemplate->addJs('script/index.js');
         $this->_baseTemplate->addCss('styles/index.css');
 		$this->_baseTemplate->addCss('styles/registration.css');
-        $this->_baseTemplate->addCss('styles/logining.css');
-        $this->_baseTemplate->addCss('styles/login.css');
+		$this->_baseTemplate->addCss('styles/logining.css');
+		$this->_baseTemplate->addCss('styles/login.css');
         $this->_baseTemplate->addCss('styles/pager.css');
         $this->_baseTemplate->addCss('styles/footer.css');
 		

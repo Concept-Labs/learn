@@ -48,9 +48,17 @@ Class Controller_User Extends Controller_Base
             $_SESSION['error'] = 'Помилка: пароль і підтвердження пароля не співпадають';
         }
         if(empty($data['name'])){
-            $_SESSION['error'] = 'Помилка: імя не може бути пусте';
+            $_SESSION['error'] = 'Помылка: поле имя не может быть пустым';
         } elseif(empty($data['surname'])) {
-            $_SESSION['error'] = 'Помилка: прізвище не може бути пусте';
+            $_SESSION['error'] = 'Помылка: поле фамилия не может бить пустым';
+        }elseif(empty($data['patronymic'])) {
+            $_SESSION['error'] = 'Помылка: поле отчество не может бить пустым';
+        }elseif(empty($data['pol'])) {
+            $_SESSION['error'] = 'Помылка: укажите свой пол стати';
+        }elseif(empty($data['email'])) {
+            $_SESSION['error'] = 'Помылка: укажите свой email';
+        }elseif(empty($data['password'])) {
+            $_SESSION['error'] = 'ПомиПомылка: укажите свой пароль';
         }//elseif(...  дальше добавте інші провірки
         else { //нема помилки
             try {
@@ -77,7 +85,7 @@ Class Controller_User Extends Controller_Base
         }
         
         if(isset($_SESSION['error'])){
-            header("Location: /user/registration");
+            header("Location: /user/registration#win1");
             exit();
         }
         //если все ок - идем на сакес пейдж
